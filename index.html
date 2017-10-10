@@ -1,45 +1,14 @@
 <html>
     <head>
         <title>Twitch Viewer</title>
-        <style>
-            .container {
-                display: flex;
-                min-height: 100vh;
-                flex-direction: column;
-            }
-
-            .align-center {
-                text-align: center;
-            }
-        </style>
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <div class="container">
             <h2 class="align-center">Twitch Streamers</h2>
-
-
         </div>
-        
-        
-        <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-
-  <script>
-    $(document).ready(function(){
-        console.log("inside doc ready");
-        fetch('https://wind-bow.glitch.me/twitch-api/channels/freecodecamp').then(function(response) {
-            console.log(response);
-            console.log(response.json());   
-            return response.json();
-        }).then(function(obj){
-            console.log(obj);
-        })
-        .catch(function(err) {
-            console.log(err);
-        });
-    });
-        </script>
+    
+        <script src="jquery.min.js"></script>
+        <script src="./main.js"></script>        
     </body>
 </html>
